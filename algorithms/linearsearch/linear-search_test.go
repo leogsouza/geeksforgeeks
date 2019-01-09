@@ -1,4 +1,4 @@
-package linear-search
+package linearsearch
 
 import (
 	"testing"

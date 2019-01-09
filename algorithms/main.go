@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	ls "github.com/leogsouza/geeksforgeeks/algorithms/linear-search"
+	ls "github.com/leogsouza/geeksforgeeks/algorithms/linearsearch"
 )
 
 func main() {
