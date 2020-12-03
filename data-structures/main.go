@@ -1,19 +1,28 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/leogsouza/geeksforgeeks/data-structures/linkedlist"
 )
 
 func main() {
 	ll := &linkedlist.LinkedList{}
-
-	ll.Head = &linkedlist.Node{Data: 1, Next: nil}
-	second := &linkedlist.Node{Data: 2, Next: nil}
-	third := &linkedlist.Node{Data: 3, Next: nil}
-
-	ll.Head.Next = second
-
-	second.Next = third
-
+	ll.AddToHead(0)
+	ll.AddToHead(1)
+	ll.AddToHead(2)
+	ll.AddToHead(3)
+	fmt.Println("Linked List after added 4 items to head")
 	ll.PrintList()
+	fmt.Println()
+
+	ll.AddToEnd(5)
+	fmt.Println("Linked List after added a node to the end")
+	ll.PrintList()
+	fmt.Println()
+
+	ll.DeleteNode(2)
+	fmt.Println("Linked list after delete a node")
+	ll.PrintList()
+
 }

@@ -69,3 +69,25 @@ func (ll *LinkedList) AddToEnd(data int) {
 
 	last.Next = newNode
 }
+
+// DeleteNode deletes the first occurrence of a key in linked list
+func (ll *LinkedList) DeleteNode(key int) {
+	temp, prev := ll.Head, &Node{}
+
+	if temp != nil && temp.Data == key {
+		ll.Head = temp.Next
+		return
+	}
+
+	for temp != nil && temp.Data != key {
+		prev = temp
+		temp = temp.Next
+	}
+
+	if temp == nil {
+		return
+	}
+
+	prev.Next = temp.Next
+
+}
