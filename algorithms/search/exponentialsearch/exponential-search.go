@@ -1,8 +1,8 @@
 package exponentialsearch
 
 import (
-	"github.com/leogsouza/geeksforgeeks/algorithms/binarysearch"
 	"github.com/leogsouza/geeksforgeeks/algorithms/common"
+	"github.com/leogsouza/geeksforgeeks/algorithms/search/binarysearch"
 )
 
 // ExponentialSearch performs a search into the array

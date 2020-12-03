@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	js "github.com/leogsouza/geeksforgeeks/algorithms/jumpsearch"
+	js "github.com/leogsouza/geeksforgeeks/algorithms/search/jumpsearch"
 )
 
 func main() {
