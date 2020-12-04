@@ -91,3 +91,28 @@ func (ll *LinkedList) DeleteNode(key int) {
 	prev.Next = temp.Next
 
 }
+
+// DeleteAt deletes a node at specific position
+func (ll *LinkedList) DeleteAt(position int) {
+	if ll.Head == nil {
+		return
+	}
+
+	node := ll.Head
+
+	if position == 0 {
+		ll.Head = node.Next
+	}
+
+	for i := 0; node != nil && i < position-1; i++ {
+		node = node.Next
+	}
+
+	if node == nil || node.Next == nil {
+		return
+	}
+
+	next := node.Next.Next
+
+	node.Next = next
+}

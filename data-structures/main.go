@@ -22,7 +22,12 @@ func main() {
 	fmt.Println()
 
 	ll.DeleteNode(2)
-	fmt.Println("Linked list after delete a node")
+	fmt.Println("Linked list after delete a node by data")
+	ll.PrintList()
+	fmt.Println()
+
+	ll.DeleteAt(1)
+	fmt.Println("Linked list after delete a node by position")
 	ll.PrintList()
 
 }
