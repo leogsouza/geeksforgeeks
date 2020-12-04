@@ -116,3 +116,8 @@ func (ll *LinkedList) DeleteAt(position int) {
 
 	node.Next = next
 }
+
+// DeleteList deletes the entire Linked List
+func (ll *LinkedList) DeleteList() {
+	ll.Head = nil
+}
