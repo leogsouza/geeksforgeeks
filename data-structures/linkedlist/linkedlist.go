@@ -121,3 +121,15 @@ func (ll *LinkedList) DeleteAt(position int) {
 func (ll *LinkedList) DeleteList() {
 	ll.Head = nil
 }
+
+// Size returns the length of linked lists
+func (ll *LinkedList) Size() int {
+	current := ll.Head
+	c := 0
+	for current != nil {
+		current = current.Next
+		c++
+	}
+
+	return c
+}

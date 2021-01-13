@@ -12,6 +12,7 @@ func main() {
 	ll.AddToHead(1)
 	ll.AddToHead(2)
 	ll.AddToHead(3)
+	fmt.Printf("Total elements into Linked List %d\n", ll.Size())
 	fmt.Println("Linked List after added 4 items to head")
 	ll.PrintList()
 	fmt.Println()
@@ -29,5 +30,5 @@ func main() {
 	ll.DeleteAt(1)
 	fmt.Println("Linked list after delete a node by position")
 	ll.PrintList()
-
+	fmt.Printf("Total elements into Linked List %d\n", ll.Size())
 }
