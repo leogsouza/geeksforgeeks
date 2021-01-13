@@ -122,7 +122,7 @@ func (ll *LinkedList) DeleteList() {
 	ll.Head = nil
 }
 
-// Size returns the length of linked lists
+// Size returns the length of linked list
 func (ll *LinkedList) Size() int {
 	current := ll.Head
 	c := 0
@@ -132,4 +132,45 @@ func (ll *LinkedList) Size() int {
 	}
 
 	return c
+}
+
+// SizeRecursive returns the length o linked list using recursion
+func (ll *LinkedList) SizeRecursive() int {
+	current := ll.Head
+
+	return getNodeRec(current)
+}
+
+func getNodeRec(node *Node) int {
+	if node == nil {
+		return 0
+	}
+
+	return 1 + getNodeRec(node.Next)
+}
+
+// Search checks if a value exists in a Linked List
+func (ll *LinkedList) Search(value int) bool {
+	current := ll.Head
+
+	for current != nil {
+		if current.Data == value {
+			return true
+		}
+		current = current.Next
+	}
+
+	return false
+}
+
+// SearchRecursive checks if a value exists in a Linked List recursively
+func (ll *LinkedList) SearchRecursive(head *Node, v int) bool {
+	if head == nil {
+		return false
+	}
+	if head.Data == v {
+		return true
+	}
+
+	return ll.SearchRecursive(head.Next, v)
 }

@@ -16,6 +16,7 @@ func main() {
 	fmt.Println("Linked List after added 4 items to head")
 	ll.PrintList()
 	fmt.Println()
+	fmt.Println("Is 3 in the list? ", ll.Search(3))
 
 	ll.AddToEnd(5)
 	fmt.Println("Linked List after added a node to the end")
@@ -30,5 +31,7 @@ func main() {
 	ll.DeleteAt(1)
 	fmt.Println("Linked list after delete a node by position")
 	ll.PrintList()
-	fmt.Printf("Total elements into Linked List %d\n", ll.Size())
+	fmt.Println()
+	fmt.Printf("Total elements into Linked List %d\n", ll.SizeRecursive())
+	fmt.Println("Is 1 in the list? ", ll.SearchRecursive(ll.Head, 1))
 }
