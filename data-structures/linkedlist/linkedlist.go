@@ -174,3 +174,18 @@ func (ll *LinkedList) SearchRecursive(head *Node, v int) bool {
 
 	return ll.SearchRecursive(head.Next, v)
 }
+
+// PrintValueAt prints value of a node at specific index position
+func (ll *LinkedList) PrintValueAt(index int) {
+	current := ll.Head
+	c := 0
+
+	for current != nil {
+		if c == index {
+			fmt.Printf("The Element at index %d is %d\n", index, current.Data)
+			return
+		}
+	}
+
+	fmt.Printf("There's no element at index %d\n", index)
+}
